@@ -1,24 +1,23 @@
 import './App.css';
 import React from "react";
-import {Route, BrowserRouter} from "react-router-dom";
+import {Route, BrowserRouter, NavLink} from "react-router-dom";
 import {Menu} from "./components/Menu";
-import {Postlist} from "./components/Postlist";
-import {ContactUs} from "./components/ContactUs";
+import {PostList} from "./components/PostList";
 import {Post} from "./components/Post";
+import {AddPost} from "./components/AddPost";
 
 function App() {
-  return (
-     <div className="container">
-         <BrowserRouter>
+    return (
+        <div className="container">
+            <BrowserRouter>
                 <Menu/>
-                <Route exact path="/" render={()=><Postlist/>}/>
-                <Route path="/aboute" render={()=><h1>О нас</h1>}/>
-                <Route path="/contact-us" render={()=><ContactUs/>}/>
-                <Route path="/post" render={()=><Post/>}/>
-         </BrowserRouter>
-     </div>
-
-  );
+                <Route exact path="/" render={()=><PostList/>} />
+                <Route path="/addPost" render={()=><AddPost/>}/>
+                <Route path="/post/:id" render={(props)=><Post {...props}/>}/>
+                <Route path="/register" render={()=><regs/>}/>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;

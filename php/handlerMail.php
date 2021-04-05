@@ -1,5 +1,5 @@
 <?php
-  $mysqli = new mysqli('localhost','korp9000_1','ee0U&9*k','korp9000_1');
+  $mysqli = new mysqli('localhost','korp9001_1','9ckeD&9a','korp9001_1');
   $name = $_POST['name'];
   $email= $_POST['email'];
   $text = $_POST['text'];
