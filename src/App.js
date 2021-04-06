@@ -5,6 +5,7 @@ import {Menu} from "./components/Menu";
 import {PostList} from "./components/PostList";
 import {Post} from "./components/Post";
 import {AddPost} from "./components/AddPost";
+import {Regs} from "./components/Regs";
 
 function App() {
     return (
